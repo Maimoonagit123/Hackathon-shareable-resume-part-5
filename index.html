@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;"><i><u>Shareable Resume Form</u></i></h1>
+    <form id="Resume-form">
+        <fieldset>
+            <!--Personal Information-->
+            <legend style="font-size: 20px;"><b>Personal Information</b></legend>
+            <label for="userName"><b>Username:</b></label>
+            <input type="text" id="username" name="name" placeholder="Enter Your Username...." required>
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name...." required>
+            <label for="Email"><b>Email:</b></label>
+            <input type="text" id="Email" name="Email" placeholder="Enter Your Email Id..." required>
+            <label for="link"><b>LinkenIn:</b></label>
+            <input type="url" id="LinkenIn" name="LinkenIn" placeholder="Enter Your LinkenIn Account..." required>
+            <label for="phone"><b>Contact No:</b></label>
+            <input type="tel" id="Contact" name="Contact" placeholder="Enter Your Contact No...." required>
+            <label for="Date of Birth"><b>Date of Birth:</b></label>
+            <input type="date" id="Date of Birth" name="Date of Birth" placeholder="Select Your birthday..." required>
+         <label for="Gender"><b>Gender:</b> <input type="radio" id="Gender"  name="Gender">Male <input type="radio" name="Gender">Female</label>
+      
+        </fieldset>
+        
+       <fieldset>
+        <!--Education-->
+        <legend  style="font-size: 20px;"><b>Education</b></legend>
+        <label for="Education"><b></b>
+        </label>
+        <textarea id="Education" placeholder="Enter Your Education.." rows="4" required></textarea>
+        </fieldset>
+        <fieldset>
+        <!--Experience-->
+        <legend style="font-size: 20px;"><b>Work Experience</b></legend>
+        <label for="Experience" ></label>
+       <textarea id="Experience" placeholder="Write About Your Work Experience.." rows="5" required></textarea>
+        </fieldset>
+       <!--Skills-->
+        <fieldset>
+        <legend  style="font-size: 20px;"><b>Skills</b></legend>
+        <label for="Skills"><b>Mention Your Skills..</b></label>
+        <textarea id="Skills"  placeholder="Project Management.." required rows="3"></textarea>
+        </fieldset>
+        <button type="submit"><b><i>Generate Your Resume</i></b></button>
+    </form>
+
+    <br>
+    
+    <!--Dynamic Resume-->
+    <div id="Resume-Display">
+    <!--Resume will be generate-->
+    </div>
+    <br>
+    <div id="Shareable-link-container" style="display: none;">
+        <h2>Shareable Link</h2>
+        <p>Here is your link to view or Edit your resume:</p>
+        <a href="#" id="Shareable-link" target="_blank"></a>
+        <button id="Download-PDF"><b>Download as PDF</b></button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
